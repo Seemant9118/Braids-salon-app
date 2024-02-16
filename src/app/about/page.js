@@ -22,7 +22,7 @@ export default function About() {
             <div className="sm:h-[70vh] h-[80vh] w-full lg:px-10 md:px-5 px-2 pt-2 pb-2 grid sm:grid-cols-2 sm:grid-rows-1 grid-rows-2 grid-cols-1 gap-2">
                 <div id="desc" className=" h-full flex flex-col justify-center items-start gap-2">
                     <div id="head" className="w-full lg:text-5xl md:text-3xl sm:text-xl text-base font-bold">About African Braids </div>
-                    <div id="descc" className="w-full md:text-base text-sm" >Welcome to African Braids, where the art of braiding is more than just a service; it's a cherished family tradition that spans generations. Our roots trace back to the legacy of our great-grandmother, Yaa Dantoah, in Ghana, West Africa, where the intricate art of braiding was passed down through the matriarchs of our family.</div>
+                    <div id="descc" className="w-full md:text-base text-sm" >Welcome to African Braids, where the art of braiding is more than just a service; its a cherished family tradition that spans generations. Our roots trace back to the legacy of our great-grandmother, Yaa Dantoah, in Ghana, West Africa, where the intricate art of braiding was passed down through the matriarchs of our family.</div>
                 </div>
                 <div className="h-full justify-center items-center">
                     <div id="img" className="rounded-3xl h-full w-full bg-brading-hero bg-cover bg-center shadow-xl shadow-gray-400 ">

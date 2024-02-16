@@ -145,7 +145,7 @@ export default function Example() {
                                 type="submit"
                                 className="block w-full rounded-md bg-primary px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-[#b68262] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                             >
-                                Let's talk
+                                Lets talk
                             </button>
                         </div>
                     </form>
@@ -161,7 +161,7 @@ export default function Example() {
                             icons.map((icon) => (<li key={icon.id} className="hover:text-yellow-500 hover:cursor-pointer">{icon.icon}{icon.title}</li>))
                         }
                     </ul>
-                    <p className="md:text-base text-xs text-white w-full">Your satisfaction is our priority, and we're eager to help you achieve your desired braided style. Reach out using your preferred method, and let's embark on your braiding journey together!</p>
+                    <p className="md:text-base text-xs text-white w-full">Your satisfaction is our priority, and we are eager to help you achieve your desired braided style. Reach out using your preferred method, and lets embark on your braiding journey together!</p>
                 </div>
             </div>
 
