@@ -21,7 +21,7 @@ export default function Footer() {
     ]
 
     return (
-        <div className="border-t-2 border-slate-100 h-1/2 grid lg:grid-cols-6 lg:px-10 md:px-5 px-2 sm:py-24 py-2" >
+        <div className="border-t-2 border-slate-100 h-1/2 grid lg:grid-cols-6 lg:px-10 md:px-5 px-2 sm:py-24 py-5" >
             <div className="col-span-2 flex flex-col justify-center gap-2">
                 <div className='w-1/2 object-cover '>
                     <h1 className="lg:text-6xl md:text-5xl sm:text-2xl text-xl font-bold">Braids</h1>
@@ -29,14 +29,14 @@ export default function Footer() {
 
                 <div id="caption" className=" w-full text-slate-800">Salon Co-operative and Creative Space</div>
                 <div id="iconList" className=" w-full">
-                    <ul className='list-none flex gap-16'>
+                    <ul className='list-none flex gap-16 sm:text-base text-xs'>
                         {
                             icons.map((icon) => (<li key={icon.id} className="w-8">{icon.title}</li>))
                         }
                     </ul>
                 </div>
                 <div className="w-full text-xs text-slate-800 ">
-                    Copyright © 2024, Foundry Salon. All rights reserved. See our terms of use and privacy notice.
+                    Copyright © 2024, Braids. All rights reserved. See our terms of use and privacy notice.
                 </div>
             </div>
 
@@ -52,7 +52,7 @@ export default function Footer() {
             </div>
 
             <div className=' flex flex-col justify-center gap-4'>
-                <div className='font-bold '>Solution</div>
+                <div className='font-bold '>Solution1</div>
                 <ul className="flex flex-col gap-3">
                     {
                         solutionsList.map((solItem) => (
@@ -63,7 +63,7 @@ export default function Footer() {
             </div>
 
             <div className='flex flex-col justify-center gap-4'>
-                <div className='font-bold '>Solution</div>
+                <div className='font-bold '>Solution2</div>
                 <ul className="flex flex-col gap-3">
                     {
                         solutionsList.map((solItem) => (
@@ -74,7 +74,7 @@ export default function Footer() {
             </div>
 
             <div className='flex flex-col justify-center gap-4'>
-                <div className='font-bold '>Solution</div>
+                <div className='font-bold '>Solution3</div>
                 <ul className="flex flex-col gap-3">
                     {
                         solutionsList.map((solItem) => (

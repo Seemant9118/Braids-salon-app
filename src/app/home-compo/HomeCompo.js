@@ -46,13 +46,13 @@ export default function HomeCompo() {
             </div>
 
             {/* combine components */}
-            <div className="bg-primary h-full w-full lg:px-10 md:px-5 px-2 py-5 flex md:flex-row flex-col">
+            <div className="bg-primary h-full w-full lg:px-10 md:px-5 px-2 py-5 flex md:flex-row flex-col md:gap-0 gap-5">
                 <div id="serviceImg" className="flex-1 w-full">
                     <Image src={braids1} alt="img" />
 
                 </div>
                 <div id="serviceDesc" className="flex-1 gap-2 flex flex-col justify-center items-center text-white">
-                    <div className="w-2/3 lg:text-6xl md:text-4xl sm:text-2xl text-base">Our Services</div>
+                    <div className="w-2/3 lg:text-6xl md:text-4xl sm:text-2xl text-base font-bold">Our Services</div>
                     <div className="w-2/3 lg:text-xl md:text-l sm:text-base text-sm">Whether you’re coming in for a haircut, coloring, extensions, treatment, or event updo, our stylists take the time to understand your unique needs</div>
                     <div className="w-2/3">
                         <Button1 path="" btnName="Services" />
@@ -61,9 +61,9 @@ export default function HomeCompo() {
             </div>
 
             {/* combine components 2 */}
-            <div className="bg-white h-full w-full lg:px-10 md:px-5 px-2 py-5 flex md:flex-row flex-col">
+            <div className="bg-white h-full w-full lg:px-10 md:px-5 px-2 py-5 flex md:flex-row flex-col md:gap-0 gap-5">
                 <div id="serviceDesc" className="flex-1 gap-2 flex flex-col justify-center items-center text-black">
-                    <div className="w-2/3 lg:text-6xl md:text-4xl sm:text-2xl text-base">Book an appointement</div>
+                    <div className="w-2/3 lg:text-6xl md:text-4xl sm:text-2xl text-base font-bold">Book an appointement</div>
                     <div className="w-2/3 lg:text-xl md:text-l sm:text-base text-sm">Whether you’re coming in for a haircut, coloring, extensions, treatment, or event updo, our stylists take the time to understand your unique needs</div>
                     <div className="w-2/3">
                         <Button2 path="" btnName="Book Now" />
@@ -79,7 +79,7 @@ export default function HomeCompo() {
             <Review />
 
             {/* Our Location */}
-            < div className="bg-white h-full w-full lg:px-10 md:px-5 px-2 py-5 flex lg:flex-row flex-col" >
+            < div className="bg-white h-full w-full lg:px-10 md:px-5 px-2 py-5 flex lg:flex-row flex-col md:gap-0 gap-5" >
                 <div id="serviceImg" className="flex-1 w-full">
                     <Image  src={location}  alt="img"/>
                 </div>
