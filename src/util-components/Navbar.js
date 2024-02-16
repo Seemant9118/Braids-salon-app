@@ -28,7 +28,7 @@ export default function Navbar() {
     const handleMenuBtn = () => {
         setTimeout(() => setMenuOpen(!menuOpen), 500);
     }
-    menuOpen ? disableBodyScroll(window.document) : enableBodyScroll(window.document);
+    // menuOpen ? disableBodyScroll(window.document) : enableBodyScroll(window.document);
 
     // scrollbar - function
     // const handleNavColor = () => {
