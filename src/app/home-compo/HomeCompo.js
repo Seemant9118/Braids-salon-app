@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import Image from "next/image";
 import { Typography } from "@material-tailwind/react";
@@ -39,7 +39,7 @@ export default function HomeCompo() {
                     <div className="mt-8 grid w-full justify-center">
                         <div className="mb-2 flex w-full flex-col gap-4 md:flex-row">
                             <Button1 path="" btnName="Book Now" />
-                            <Button1 path="" btnName="Check Services" />
+                            <Button1 path="service" btnName="Check Services" />
                         </div>
                     </div>
                 </div>
@@ -55,7 +55,7 @@ export default function HomeCompo() {
                     <div className="w-2/3 lg:text-6xl md:text-4xl sm:text-2xl text-base font-bold">Our Services</div>
                     <div className="w-2/3 lg:text-xl md:text-l sm:text-base text-sm">Whether you’re coming in for a haircut, coloring, extensions, treatment, or event updo, our stylists take the time to understand your unique needs</div>
                     <div className="w-2/3">
-                        <Button1 path="" btnName="Services" />
+                        <Button1 path="service" btnName="Services" />
                     </div>
                 </div>
             </div>
@@ -63,7 +63,7 @@ export default function HomeCompo() {
             {/* combine components 2 */}
             <div className="bg-white h-full w-full lg:px-10 md:px-5 px-2 py-5 flex md:flex-row flex-col md:gap-0 gap-5">
                 <div id="serviceDesc" className="flex-1 gap-2 flex flex-col justify-center items-center text-black">
-                    <div className="w-2/3 lg:text-6xl md:text-4xl sm:text-2xl text-base font-bold">Book an appointement</div>
+                    <div className="w-2/3 lg:text-6xl md:text-4xl sm:text-2xl text-base font-bold">Book an appointment</div>
                     <div className="w-2/3 lg:text-xl md:text-l sm:text-base text-sm">Whether you’re coming in for a haircut, coloring, extensions, treatment, or event updo, our stylists take the time to understand your unique needs</div>
                     <div className="w-2/3">
                         <Button2 path="" btnName="Book Now" />
@@ -84,7 +84,7 @@ export default function HomeCompo() {
                     <Image  src={location}  alt="img"/>
                 </div>
                 <div id="serviceDesc" className="flex-1 gap-4 flex flex-col justify-center items-center text-black">
-                    <div className="w-2/3 lg:text-6xl md:text-4xl sm:text-2xl text-base">Our Location</div>
+                    <div className="w-2/3 lg:text-6xl md:text-4xl sm:text-2xl text-base font-bold">Our Location</div>
                     <div className="w-2/3 lg:text-xl md:text-l sm:text-base text-sm font-semibold">1234, KO , IN - Dummy address
                     </div>
                     <div className="w-2/3 lg:text-xl md:text-l sm:text-base text-sm">Open Daily, 9:00AM - 5:00PM</div>

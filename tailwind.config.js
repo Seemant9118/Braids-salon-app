@@ -16,6 +16,7 @@ module.exports = {
       },
       backgroundImage: {
         'brading-hero': "url('https://media.istockphoto.com/id/1265423651/photo/woman-with-african-dreadlocks.jpg?s=2048x2048&w=is&k=20&c=uXexPun45yB6F7dgC-_PJhGy_mEnLRrnK7J9w-BrGtE=')",
+        'braiding-hero':"url('https://unsplash.com/photos/womans-face-vosaqRpyOBo')"
       }
     },
   },

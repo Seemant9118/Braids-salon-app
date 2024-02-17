@@ -1,6 +1,6 @@
 "use client"
 
-import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
+// import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 import { useRouter, usePathname } from 'next/navigation';
 import { useState } from 'react';
 import Image from 'next/image';
@@ -20,6 +20,7 @@ export default function Navbar() {
 
     const navList = [
         { title: 'home', path: '' },
+        { title: 'services', path: 'service' },
         { title: 'testimonials', path: 'testimonial' },
         { title: 'about', path: 'about' },
         { title: 'contact', path: 'contact' },
@@ -38,7 +39,7 @@ export default function Navbar() {
 
     return (
         <div className="sticky top-0 z-20 shadow-md bg-white">
-            <div className="h-32 w-full lg:px-10 md:px-5 px-2 pt-2 pb-2 grid grid-cols-3 text-primary">
+            <div className="lg:h-32 md:h-28 sm:h-24 h-16 w-full lg:px-10 md:px-5 px-2 pt-2 pb-2 grid grid-cols-3 text-primary">
                 {/* Mobile hamburgerMenu */}
                 <div className="h-full lg:hidden flex justify-start items-center">
                     <div className="md:w-1/12 w-2/12 " onClick={handleMenuBtn}>
@@ -47,7 +48,7 @@ export default function Navbar() {
                 </div>
 
                 <div id="nav-lists" className="h-full hidden lg:flex  justify-start items-center ">
-                    <ul className="flex gap-4 ">
+                    <ul className="flex lg:gap-3 ">
                         {navList.map((item, id) => (
                             <li className={pathName === `/${item.path}` ? "text-sm font-bold text-black underline" : "text-sm hover:cursor-pointer hover:text-black"} key={id} onClick={() => router.push(`/${item.path}`)} >{item.title.toUpperCase()}</li>
                         ))}
