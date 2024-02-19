@@ -21,11 +21,9 @@ export default function HomeCompo() {
         setFormOpen(!isFormOpen);
     }
 
-    console.log(isFormOpen);
-
     return (
         <>
-            {/* handle Booking Modal */}
+            {/* handle Multi step Form Modal */}
             {isFormOpen ? <MainForm handleForm={handleForm} /> : ""}
 
             <Navbar />

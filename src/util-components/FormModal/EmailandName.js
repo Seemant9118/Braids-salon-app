@@ -1,6 +1,8 @@
 "use client";
 
-export default function EmailandName() {
+export default function EmailandName(props) {
+    const { data, handleChange } = props;
+
     return (
         <div className="w-full p-5 flex flex-col gap-2">
             <div className="text-sm font-bold">4. Enter your Personal details</div>
@@ -14,6 +16,8 @@ export default function EmailandName() {
                         name="name"
                         type="text"
                         autoComplete="name"
+                        value={data.name}
+                        onChange={handleChange}
                         className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                     />
                 </div>
@@ -28,6 +32,8 @@ export default function EmailandName() {
                         name="email"
                         type="email"
                         autoComplete="email"
+                        value={data.email}
+                        onChange={handleChange}
                         className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                     />
                 </div>
@@ -41,7 +47,8 @@ export default function EmailandName() {
                         id="number"
                         name="number"
                         type="number"
-                        autoComplete="number"
+                        value={data.number}
+                        onChange={handleChange}
                         className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                     />
                 </div>

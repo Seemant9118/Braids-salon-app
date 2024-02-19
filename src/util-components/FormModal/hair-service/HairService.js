@@ -4,11 +4,13 @@ import { useState } from "react";
 import HairSpecific from "./HairSpecific";
 
 
-export default function HairService() {
+export default function HairService(props) {
+    const {data,handleChange} = props;
 
     const hairServices = [
         {
             id: 1, name: 'Braiding', Options: [
+                'Select Your Choice',
                 'Large Knotless Braids',
                 'Large Knotless Goddess Braids',
                 'Large Knotless H20 Curls Braids',
@@ -35,36 +37,40 @@ export default function HairService() {
         },
         {
             id: 2, name: 'Locs', Options: [
-                "Soft Locs",
-                "Full Locs",
-                "Butterfly Locs"
+                'Select Your Choice',
+                'Soft Locs',
+                'Full Locs',
+                'Butterfly Locs'
             ],
         },
         {
             id: 3, name: 'Crochet', Options: [
-                "Weave/invisible",
-                "Medium braids",
-                "Small crochet braids"
+                'Select Your Choice',
+                'Weave/invisible',
+                'Medium braids',
+                'Small crochet braids'
             ]
         },
         {
             id: 4, name: 'Kid under 10', Options: [
-                "Medium (20 inches)",
-                "Large",
-                "Jumbo braid"
+                'Select Your Choice',
+                'Medium (20 inches)',
+                'Large',
+                'Jumbo braid'
             ]
         },
         {
             id: 5, name: 'Sew-In', Options: [
-                "Traditional sew in",
-                "Glue-less closure sew in",
-                "Closure sew in",
-                "Frontal sew in",
-                "Synthetic wig sew in",
-                "Human hair wig sew in"
+                'Select Your Choice',
+                'Traditional sew in',
+                'Glue-less closure sew in',
+                'Closure sew in',
+                'Frontal sew in',
+                'Synthetic wig sew in',
+                'Human hair wig sew in'
             ]
         },
-        { id: 6, name: 'Braids Takedown (Unbraiding)', Options: ["Unbraiding"] },
+        { id: 6, name: 'Braids Takedown (Unbraiding)', Options: ['Select Your Choice','Unbraiding'] },
     ];
 
 
@@ -73,7 +79,6 @@ export default function HairService() {
     const handleOption = (option) => {
         setSelectedOption(option);
     }
-    // console.log(selectedOption);
 
     return (
         <div className="mt-10 space-y-10 px-10">
@@ -87,10 +92,12 @@ export default function HairService() {
                                     <div className="flex h-6 items-center">
                                         <input
                                             id={hservice.id}
-                                            name="Hair Service"
+                                            name="hairService"
+                                            value={hservice.name}
                                             type="radio"
                                             className="h-4 w-4 rounded border-gray-300 text-primary focus:ring-blue-600 hover:cursor-pointer"
-                                            onChange={() => handleOption(hservice)}
+                                            onChange={handleChange}
+                                            onClick={() => handleOption(hservice)}
                                         />
                                     </div>
                                     <div className="text-sm leading-6 ">
@@ -104,7 +111,7 @@ export default function HairService() {
                     </div>
                 </div>
             </fieldset>
-            <HairSpecific optionsList={selectedOption} />
+            <HairSpecific optionsList={selectedOption} data={data} handleChange={handleChange} />
         </div>
     )
 }

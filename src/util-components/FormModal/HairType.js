@@ -1,6 +1,9 @@
 "use client"
 
-export default function HairType() {
+export default function HairType(props) {
+
+    const {data,handleChange} = props;
+
     const hairTypes = [
         { id: 1, name: 'African Hair' },
         { id: 2, name: 'Asian Hair' },
@@ -20,7 +23,9 @@ export default function HairType() {
                                     <div className="flex h-6 items-center">
                                         <input
                                             id={htype.id}
-                                            name={htype.name}
+                                            name="hairType"
+                                            value={htype.name}
+                                            onChange={handleChange}
                                             type="checkbox"
                                             className="h-4 w-4 rounded border-gray-300 text-primary focus:ring-blue-600 hover:cursor-pointer"
                                         />
