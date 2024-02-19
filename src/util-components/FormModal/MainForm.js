@@ -36,11 +36,11 @@ export default function MainForm({handleForm}) {
     }
 
     const MultiStepFormElements = [
-        <HairType data={data} handleChange={handleChange} />,
-        <HairService data={data} handleChange={handleChange} />,
-        <ChooseDate data={data} handleChange={handleChange} />,
-        <EmailandName data={data} handleChange={handleChange} />,
-        <FinalConfirmation data={data} handleChange={handleChange} />,
+        <HairType key={data} data={data} handleChange={handleChange} />,
+        <HairService key={data} data={data} handleChange={handleChange} />,
+        <ChooseDate key={data} data={data} handleChange={handleChange} />,
+        <EmailandName key={data} data={data} handleChange={handleChange} />,
+        <FinalConfirmation key={data} data={data} handleChange={handleChange} />,
     ];
 
 
