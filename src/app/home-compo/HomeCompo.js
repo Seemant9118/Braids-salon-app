@@ -2,20 +2,33 @@
 
 import Image from "next/image";
 import { Typography } from "@material-tailwind/react";
-import {Button1,Button2,Button3} from "@/util-components/Button";
+import { Button1, Button2, Button3 } from "@/util-components/Button";
 import Navbar from "@/util-components/Navbar";
 import Footer from "@/util-components/Footer";
 import Review from "@/util-components/Review";
 import braids1 from "../../../assets/braids1.jpg";
 import braids2 from "../../../assets/braids2.jpg";
 import location from "../../../assets/location.jpg";
+import { useState } from "react";
+import MainForm from "@/util-components/FormModal/MainForm";
 
 
 export default function HomeCompo() {
 
+    const [isFormOpen, setFormOpen] = useState(false);
+
+    const handleForm = () => {
+        setFormOpen(!isFormOpen);
+    }
+
+    console.log(isFormOpen);
+
     return (
         <>
-            <Navbar/>
+            {/* handle Booking Modal */}
+            {isFormOpen ? <MainForm handleForm={handleForm} /> : ""}
+
+            <Navbar />
 
             {/* Hero */}
             <div className="grid min-h-[82vh] w-full lg:h-[54rem] md:h-[34rem] bg-brading-hero bg-center bg-cover ">
@@ -38,7 +51,7 @@ export default function HomeCompo() {
                     </Typography>
                     <div className="mt-8 grid w-full justify-center">
                         <div className="mb-2 flex w-full flex-col gap-4 md:flex-row">
-                            <Button1 path="" btnName="Book Now" />
+                            <button className="lg:w-28 md:w-24 md:h-14 sm:w-24 sm:h-12 w-20 h-14 sm:text-base text-sm bg-[#efebeb] flex justify-center items-center text-btnColor transition ease-in-out delay-150 hover:bg-[#f4f3f3] hover:cursor-pointer" onClick={handleForm}>Book Now</button>
                             <Button1 path="service" btnName="Check Services" />
                         </div>
                     </div>
@@ -66,7 +79,7 @@ export default function HomeCompo() {
                     <div className="w-2/3 lg:text-6xl md:text-4xl sm:text-2xl text-base font-bold">Book an appointment</div>
                     <div className="w-2/3 lg:text-xl md:text-l sm:text-base text-sm">Whether you’re coming in for a haircut, coloring, extensions, treatment, or event updo, our stylists take the time to understand your unique needs</div>
                     <div className="w-2/3">
-                        <Button2 path="" btnName="Book Now" />
+                        <button className="lg:w-28 md:w-24 md:h-14 sm:w-24 sm:h-12 w-20 h-14 sm:text-base text-sm bg-btnColor flex justify-center items-center text-white transition ease-in-out delay-150 hover:bg-[#869787] hover:cursor-pointer" onClick={handleForm}>Book Now</button>
                     </div>
                 </div>
                 <div id="serviceImg" className="flex-1 w-full">
@@ -81,7 +94,7 @@ export default function HomeCompo() {
             {/* Our Location */}
             < div className="bg-white h-full w-full lg:px-10 md:px-5 px-2 py-5 flex lg:flex-row flex-col md:gap-0 gap-5" >
                 <div id="serviceImg" className="flex-1 w-full">
-                    <Image  src={location}  alt="img"/>
+                    <Image src={location} alt="img" />
                 </div>
                 <div id="serviceDesc" className="flex-1 gap-4 flex flex-col justify-center items-center text-black">
                     <div className="w-2/3 lg:text-6xl md:text-4xl sm:text-2xl text-base font-bold">Our Location</div>
